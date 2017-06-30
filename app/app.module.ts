@@ -6,7 +6,18 @@ import { AppComponent } from "./app.component";
 import { ItemService } from "./item/item.service";
 import { ItemsComponent } from "./item/items.component";
 
+import { TNSFrescoModule } from "nativescript-fresco/angular";
+import * as frescoModule from "nativescript-fresco";
+import * as application from "application";
+
 import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listview/angular";
+
+if (application.android) {
+    application.on("launch", () => {
+        console.log("INITIALIZING FRESCO");
+        frescoModule.initialize();
+    });
+}
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -21,7 +32,8 @@ import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listvi
     imports: [
         NativeScriptModule,
         AppRoutingModule,
-        NativeScriptUIListViewModule
+        NativeScriptUIListViewModule,
+        TNSFrescoModule
     ],
     declarations: [
         AppComponent,

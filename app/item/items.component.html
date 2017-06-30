@@ -8,7 +8,8 @@
                             <GridLayout class="{{item.tileClass}} {{item.selectedClass}}" columns="*" rows="auto, auto, *, auto">
                                 <Label class="gothic-medium text-center {{item.topClass}}" text="{{item.topText}}" row="0" col="0"></Label>
 
-                                <FrescoDrawee class="show-tile-thumb" imageUri="{{item.absoluteThumb}}" actualImageScaleType="centerCrop" row="1" col="0"></FrescoDrawee>
+                                <!--Image row="1" col="0" src="{{item.absoluteThumb}}" class="show-tile-thumb" stretch="aspectFill"></Image-->
+                                <FrescoDrawee row="1" col="0" class="show-tile-thumb" imageUri="{{item.absoluteThumb}}" actualImageScaleType="centerCrop" ></FrescoDrawee>
                                 <Label row="1" col="0" class="gothic-medium show-tile-thumb-overlay" text="{{item.overlayText}}" verticalAlignment="top"
                                     [visibility]="item.overlayText!=null ? 'visible' : 'collapsed'"></Label>
 
@@ -34,7 +35,7 @@
                             </GridLayout>
                 </StackLayout>
             </ng-template>
-            <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" spanCount="{{spanCount}}" itemWidth="256" itemHeight="500"></ListViewGridLayout>
+            <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" spanCount="{{spanCount}}"></ListViewGridLayout>
             <!--ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" ></ListViewLinearLayout-->
         </RadListView>
     </GridLayout>
