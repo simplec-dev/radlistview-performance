@@ -1,22 +1,40 @@
 <ActionBar title="My App" class="action-bar">
 </ActionBar>
 
-<!--<StackLayout class="page">
-    <ListView [items]="items" class="list-group">
-        <ng-template let-item="item">
-            <Label [nsRouterLink]="['/item', item.id]" [text]="item.name"
-                class="list-group-item"></Label>
-        </ng-template>
-    </ListView>
-</StackLayout>-->
+    <GridLayout tkExampleTitle tkToggleNavButton row="2" col="0">
+        <RadListView [items]="items" #showContainer id="showContainer">
+            <ng-template tkListItemTemplate let-item="item">
+                <StackLayout class="show-tile">
+                            <GridLayout class="{{item.tileClass}} {{item.selectedClass}}" columns="*" rows="auto, auto, *, auto">
+                                <Label class="gothic-medium text-center {{item.topClass}}" text="{{item.topText}}" row="0" col="0"></Label>
 
-<GridLayout tkExampleTitle tkToggleNavButton #showContainer id="showContainer">
-    <RadListView [items]="items">
-        <ng-template tkListItemTemplate let-item="item">
-            <StackLayout orientation="horizontal" [nsRouterLink]="['/item', item.id]" >
-                <Label class="nameLabel" [text]="item.id + '. '"></Label>
-                <Label class="nameLabel" [text]="item.name"></Label>
-            </StackLayout>
-        </ng-template>
-    </RadListView>
-</GridLayout>
+                                <FrescoDrawee class="show-tile-thumb" imageUri="{{item.absoluteThumb}}" actualImageScaleType="centerCrop" row="1" col="0"></FrescoDrawee>
+                                <Label row="1" col="0" class="gothic-medium show-tile-thumb-overlay" text="{{item.overlayText}}" verticalAlignment="top"
+                                    [visibility]="item.overlayText!=null ? 'visible' : 'collapsed'"></Label>
+
+                                <GridLayout row="1" col="0" rows="1*,1*,1*" columns="auto,*,auto" class="show-tile-thumb-size">
+                                    <Image row="0" col="2" class="overlay-icon" stretch="aspectFit" src="~/img/button/completed-overlay.png" horizontalAlignment="right"
+                                        verticalAlignment="top" [visibility]="item.completed ? 'visible' : 'collapsed'"></Image>
+                                    <Image row="0" col="1" class="overlay-icon" stretch="aspectFit" src="~/img/button/empty.png" horizontalAlignment="left" verticalAlignment="bottom"></Image>
+                                    <Image row="1" col="1" class="overlay-icon" stretch="aspectFit" src="~/img/button/empty.png" horizontalAlignment="left" verticalAlignment="bottom"></Image>
+                                    <Image row="2" col="1" class="overlay-icon" stretch="aspectFit" src="~/img/button/empty.png" horizontalAlignment="left" verticalAlignment="bottom"></Image>
+                                    <Image row="2" col="0" class="overlay-icon" stretch="aspectFit" src="~/img/button/calming-overlay.png" horizontalAlignment="left"
+                                        verticalAlignment="bottom" [visibility]="item.calming ? 'visible' : 'collapsed'"></Image>
+                                    <Image row="2" col="2" class="overlay-icon" stretch="aspectFit" src="~/img/button/trusted-voice-overlay.png" horizontalAlignment="right"
+                                        verticalAlignment="bottom" [visibility]="item.includesVoice ? 'visible' : 'collapsed'"></Image>
+                                </GridLayout>
+
+                                <Label class="gothic-medium show-tile-text show-tile-name" text="{{item.name}}" row="2" col="0"></Label>
+
+                                <StackLayout class="show-tile-button" orientation="vertical" row="3" col="0" (tap)="selectShow(item)">
+                                    <StackLayout orientation="horizontal" horizontalAlignment="center">
+                                        <Label class="{{item.buttonClass}} gothic-medium" text="{{item.startButtonLabel}}"></Label>
+                                    </StackLayout>
+                                </StackLayout>
+                            </GridLayout>
+                </StackLayout>
+            </ng-template>
+            <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" spanCount="{{spanCount}}" itemWidth="256" itemHeight="500"></ListViewGridLayout>
+            <!--ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" ></ListViewLinearLayout-->
+        </RadListView>
+    </GridLayout>

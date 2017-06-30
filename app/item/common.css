@@ -1,0 +1,196 @@
+
+.scrolling-pad {
+    padding: 40 0 40 0;
+}
+
+.show-tile {
+    width: 100%;
+    padding: 10 25 10 25;
+}
+.show-tile-overlay {
+    width: 100%;
+    height: 100%;
+    padding: 10;
+}
+.top-class {
+    width: 100%;
+}
+.top-class-selected {
+    border-radius: 10;
+    border-color: white;
+    border-width: 10;
+}
+.dimmed {
+    opacity: 0.5;
+}
+.top-class-care {
+    border-radius: 10;
+    background-color: #1e8dca;
+}
+
+.top-class-album {
+    border-radius: 10;
+    background-color: #5e861e;
+}
+
+.top-class-music {
+    border-radius: 10;
+    background-color: #d58e32;
+}
+
+.top-class-training {
+    border-radius: 10;
+    background-color: #FFED8B;
+}
+
+.top-class-residents {
+    border-radius: 10;
+    background-color: #3E5E68;
+}
+
+.top-class-activities {
+    border-radius: 10;
+    background-color: #7831BB;
+}
+
+.top-text-schedule {
+    font-size: 26;
+    color: #ffffff;
+    padding: 20 20 20 20;
+    text-align: left;
+}
+
+.top-text {
+    font-size: 10;
+    color: #ffffff;
+    padding: 10;
+    text-align: left;
+}
+
+.show-tile-text {
+    font-size: 26;
+    line-height: 35;
+    color: #ffffff;
+    padding: 20 20 0 20;
+    text-align: left;
+}
+
+.show-tile-name {
+    height: 85;
+    white-space: normal;
+    margin: 0;
+    padding: 10 20 10 20;
+    vertical-align: top;
+}
+
+.show-tile-thumb {
+    width: 100%;
+    height: 240;
+    background-color: black;
+}
+
+.show-tile-thumb-size {
+    width: 100%;
+    height: 240;
+    background-color: transparent;
+}
+
+.overlay-icon {
+    width: 80;
+    height: 100;
+    margin: 0 10 0 10;
+    padding: 0;
+}
+
+.show-tile-thumb-overlay {
+    margin: 15;
+    background-color: #ffffff;
+    opacity: 0.9;
+    color: black;
+    font-size: 26.6;
+    text-align: center;
+    padding: 10;
+}
+
+.show-tile-button {
+    margin: 20;
+    border-radius: 30;
+    background-color: white;
+}
+
+.show-tile-button-care {
+    margin: 15 0 15 0;
+    font-size: 26;
+    text-align: center;
+    color: #1e8dca;
+}
+
+.show-tile-button-album {
+    margin: 15 0 15 0;
+    font-size: 26;
+    text-align: center;
+    color: #5e861e;
+}
+
+.show-tile-button-music {
+    margin: 15 0 15 0;
+    font-size: 26;
+    text-align: center;
+    color: #d58e32;
+}
+
+.show-tile-button-training {
+    margin: 15 0 15 0;
+    font-size: 26;
+    text-align: center;
+    color: #FFED8B;
+}
+
+.show-tile-button-residents {
+    margin: 15 0 15 0;
+    font-size: 26;
+    text-align: center;
+    color: #3E5E68;
+}
+
+.show-tile-button-activities {
+    margin: 15 0 15 0;
+    font-size: 26;
+    text-align: center;
+    color: #7831BB;
+}
+
+.showlist-header {
+    padding: 20 20 10 20;
+    border-width: 0 0 1 0;
+    border-color: #505050;
+}
+
+.showlist-subheader {
+    padding: 0 20 10 20;
+    border-color: #505050;
+    border-width: 0 0 1 0;
+}
+
+.showlist-image-label {
+    font-size: 22.6;
+    width: auto;
+    white-space: nowrap;
+}
+
+.showlist-image-button {
+    width: 150;
+    height: 83;
+}
+
+.showlist-header-text {
+    font-size: 41;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+.showlist-subheader-text {
+    font-size: 20;
+    color: #acacac;
+    vertical-align: middle;
+}

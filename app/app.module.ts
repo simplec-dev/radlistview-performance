@@ -5,7 +5,6 @@ import { AppComponent } from "./app.component";
 
 import { ItemService } from "./item/item.service";
 import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
 
 import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listview/angular";
 
@@ -26,8 +25,7 @@ import { NativeScriptUIListViewModule } from "nativescript-telerik-ui-pro/listvi
     ],
     declarations: [
         AppComponent,
-        ItemsComponent,
-        ItemDetailComponent
+        ItemsComponent
     ],
     providers: [
         ItemService
